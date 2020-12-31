@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#search {
+  padding: 10px 20px;
+  border-radius: 50px;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  border: 2px solid var(--primary-color);
+  color: #fff;
+}
+
+#search::placeholder {
+  color: #7378c5;
+}
+
+#search:focus {
+  background-color: var(--primary-color);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.movie {
+  position: relative;
+  background-color: var(--secondary-color);
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 20px;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  display: flex;
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: #0f0;
+}
+
+.movie-info span.orange {
+  color: #ffa500;
+}
+
+.movie-info span.red {
+  color: #f00;
+}
+
+.overview {
+  padding: 10px;
+  color: #000;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 3px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: 0.5s ease;
+  overflow-x: hidden;
+}
+
+.overview::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.overview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.overview::-webkit-scrollbar-thumb {
+  background: #7378c5;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.overview::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+.overview h3 {
+  margin-top: 0;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.page {
+  text-align: center;
+}
+
+.pages button {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: #7378c5;
+  outline: none;
+  border: 0;
+  padding: 0;
+  margin: 5px;
+}
+
+.pages button a {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: #7378c5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.pages button:active {
+  transform: scale(0.9);
+}
